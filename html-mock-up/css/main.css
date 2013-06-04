@@ -102,7 +102,7 @@ textarea {
 
 @font-face {
     font-family: 'Berthold';
-    src: url('../fonts/AkzidGroBEReg');
+    src: url('../fonts/AkzidGroBEReg.otf');
     font-weight: normal;
     font-style: normal;
 }
@@ -277,8 +277,8 @@ nav a.selected
     font-size: 0.8em;
 }
 
-.capability-teaser a
-{
+.capability-teaser a, .news a
+ {
     border-bottom: 1px solid #F1F1F2;
     color: #00DECF;
     display: block;
@@ -392,7 +392,7 @@ article .column-right
 
 }
 
-h2
+h2, .blog-page h2
 {
     font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
     font-size: 1em;
@@ -400,7 +400,7 @@ h2
     font-weight: lighter;
 }
 
-h3
+h3, .blog-page h3
  {
      font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
      font-size: .8em;
@@ -408,7 +408,7 @@ h3
      font-weight: lighter;
  }
 
-h4
+h4, .blog-page h3
 {
     font-family: Berthold, Helvetica,Arial,Sans-Serif;
     font-size: .8em;
@@ -421,7 +421,7 @@ article ul, ol
     font-size: .8em;
 }
 
-.basic-page h1
+.basic-page h1, .blog-page h1
 {
     border-bottom: 1px solid #F1F1F2;
     color: #00DECE;
@@ -499,7 +499,7 @@ article ul, ol
     background-color: #ffffff;
     position: relative;
     z-index: 10;
-    font-family: berthold, Helvetica,Arial, Sans-Serif;
+    font-family: Berthold, Helvetica,Arial,Sans-Serif;
     font-weight: lighter;
     font-size: inherit;
 }
@@ -535,14 +535,38 @@ article ul, ol
      background-position: 0px -28px;
  }
 
-.gov, .com
+.gov
 {
     background-position: 0px 0px;
 }
 
+.com
+{
+    background-position: 0 -193px;
+}
+.aged
+{
+    background-position: 0 -55px;
+}
+
+.ind
+{
+    background-position: 0 -137px;
+}
+
+.inv
+{
+    background-position: 0 -111px;
+}
+
+.pol
+{
+    background-position: 0 -84px;
+}
+
 .edu
 {
-    background-position: 0px -57px;
+    background-position: 0 -166px;
 }
 .case-study-category h1 a
 {
@@ -574,6 +598,194 @@ article ul, ol
     width: 265px;
 }
 
+
+/* Team Page */
+
+.profile
+{
+    float: left;
+    margin-left: 17px;
+    margin-right: 0;
+    width: 411px;
+}
+
+.profile h2
+{
+    padding: 10px 10px 0 10px;
+    margin: 0px;
+    color: #000000;
+    font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
+    font-size: 1.3em;
+}
+
+.profile h3
+{
+    padding: 0 10px;
+    margin: 0px;
+    color: #000000;
+    font-family: Berthold, Helvetica,Arial,Sans-Serif;
+    text-transform: uppercase;
+    font-size: .6em;
+    font-weight: bold;
+
+}
+
+.profile summary
+{
+    padding: 10px;
+}
+
+.basic-page figure
+{
+    float: left;
+    margin: 20px;
+    width: 245px;
+    text-align: center;
+}
+
+.basic-page figcaption
+{
+    float: left;
+    margin: 20px;
+    width: 245px;
+    text-align: left;
+    color: #000000;
+    font-family: Berthold, Helvetica,Arial,Sans-Serif;
+    font-size: .8em;
+    font-weight: lighter;
+}
+
+
+.basic-page hr
+{
+    float: left;
+    margin: 20px;
+    width: 835px;
+}
+
+/* Contact Page */
+
+.address {
+    font-family: Berthold, Helvetica,Arial,Sans-Serif;
+    float: left;
+    margin-left: 20px;
+    width: 280px;
+}
+
+.address p
+{
+    font-family: Berthold, Helvetica,Arial,Sans-Serif;
+    font-size: .8em;
+}
+
+.address a
+{
+    text-decoration: none;
+    color: #000000;
+}
+.map
+{
+    float:left;
+    padding-top: 15px;
+    padding-bottom: 100px;
+}
+
+aside
+{
+    float: right;
+    margin-right: 15px;
+}
+
+/* Blog Page */
+aside .content
+{
+    float: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+
+}
+
+.item-list ul
+{
+    list-style: none;
+    padding: 0px;
+    font-family: Berthold, Helvetica,Arial,Sans-Serif;
+}
+
+.achive-list
+{
+    padding-left:0px;
+    margin: 0px;
+}
+
+.achive-list ul
+{
+    padding-left:20px;
+    margin: 0px;
+}
+
+.achive-list li
+{
+    list-style-type:none;
+    padding:0 0 0 20px;
+    background: transparent url('../img/sdc_sprites.png') no-repeat 0 -293px;
+}
+
+.achive-list a
+{
+    color: #000000;
+    text-decoration: none;
+    font-size: .8em;
+}
+.achive-list li.expanded
+{
+    background: transparent url('../img/sdc_sprites.png') no-repeat 0 -270px;
+}
+
+.blog-page
+{
+    float: left;
+    padding: 15px;
+    width: 540px;
+}
+
+.blog-page h1
+{
+    color: #00DECE;
+    font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
+    font-size: 1.3em;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.news a
+{
+    text-transform: uppercase;
+    font-size: .6em;
+}
+.news a:after
+{
+    content:" >";
+}
+
+.news p
+{
+    font-size: .8em;
+}
+
+.block
+{
+    background-color: #ffffff;
+    padding: 15px;
+    width: 255px;
+}
+.archive
+{
+    margin-top: 15px;
+}
 
 /* ==========================================================================
    Helper classes

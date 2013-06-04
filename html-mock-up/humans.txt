@@ -3,7 +3,9 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Dominic Milburn -- Wed Developer -- steeloctopus
+    Groszcolab      -- Designers
+
 
 # THANKS
 
