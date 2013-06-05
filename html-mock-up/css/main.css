@@ -178,7 +178,13 @@ nav ul
 nav li
 {
     border-bottom: 1px solid #F1F1F2;
-    padding:5px 0px;
+    padding:10px 0px;
+}
+
+nav li.last
+{
+    border-bottom: none;
+    padding:10px 0px;
 }
 
 nav a
@@ -277,12 +283,17 @@ nav a.selected
     font-size: 0.8em;
 }
 
+.capability-teaser summary p
+{
+    font-size: 1.1em;
+}
+
 .capability-teaser a, .news a
  {
     border-bottom: 1px solid #F1F1F2;
     color: #00DECF;
     display: block;
-    font-size: 0.8em;
+    font-size: 0.7em;
     padding-bottom: 20px;
     text-decoration: none;
     width: 265px;
@@ -398,6 +409,7 @@ h2, .blog-page h2
     font-size: 1em;
     color: #00DDCD ;
     font-weight: lighter;
+    margin-top: 0;
 }
 
 h3, .blog-page h3
@@ -473,7 +485,7 @@ article ul, ol
 {
     text-transform: uppercase;
     color:#00DECE ;
-    font-size: .7em;
+    font-size: .6em;
     text-decoration: none;
 }
 
@@ -592,7 +604,7 @@ article ul, ol
     border-bottom: 1px solid #F1F1F2;
     color: #00DECF;
     display: block;
-    font-size: 0.7em;
+    font-size: 0.6em;
     padding-bottom: 20px;
     text-decoration: none;
     width: 265px;
@@ -620,8 +632,9 @@ article ul, ol
 
 .profile h3
 {
-    padding: 0 10px;
-    margin: 0px;
+    margin: 0 10px;
+    border-bottom: 1px solid #F1F1F2;
+    padding: 0px;
     color: #000000;
     font-family: Berthold, Helvetica,Arial,Sans-Serif;
     text-transform: uppercase;
@@ -661,6 +674,28 @@ article ul, ol
     float: left;
     margin: 20px;
     width: 835px;
+}
+
+.basic-page hr.bottom,
+{
+    float: left;
+    margin: 20px;
+    margin-top:30px;
+    margin-bottom: 20px;
+    width: 835px;
+}
+
+.blog-page hr.bottom
+{
+
+    margin-top:30px;
+    margin-bottom: 20px;
+}
+
+.blog-page figcaption
+{
+    font-size: .8em;
+    color: #929396;
 }
 
 /* Contact Page */
