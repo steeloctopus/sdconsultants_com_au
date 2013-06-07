@@ -403,13 +403,35 @@ article .column-right
 
 }
 
-h2, .blog-page h2
+h2, .blog-page h2, .case-studies h2
 {
     font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
     font-size: 1em;
     color: #00DDCD ;
     font-weight: lighter;
     margin-top: 0;
+}
+
+.case-studies h2
+{
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 775px;
+}
+
+.minus, .plus
+{
+    display: block;
+    width: 100%;
+    margin:0px;
+    background-image: url('../img/sdc_sprites.png');
+    background-position: 0 -249px;
+    background-repeat: no-repeat;
+}
+
+.plus
+{
+    background-position: 0 -222px;
 }
 
 h3, .blog-page h3
@@ -497,11 +519,40 @@ article ul, ol
 
 /* Case Studies Page */
 
+.case-study-categories, .case-studies
+{
+    float: left;
+    width: 100%;
+}
+
 .case-studies
 {
+    margin-bottom: 15px;
+    width: 876px;
+    background-color: #FFFFFF;
     display:none;
 }
 
+.case-study
+{
+    padding: 0px 10px;
+    width: 855px;
+}
+
+.case-studies h1
+{
+    font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
+    font-size: 1em;
+    color: #000000 ;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+.case-study summary
+{
+    display: none;
+    float: left;
+}
 .case-study-category
 {
     width: 285px;
@@ -528,20 +579,78 @@ article ul, ol
     font-weight: lighter;
     text-transform: capitalize;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-.icon
+
+.case-col-left
 {
-    float:left;
-    width: 23px;
-    height: 23px;
-    display: block;
-    margin: 20px;
-    background-image: url('../img/sdc_sprites.png');
-    background-position: -28px -28px ;
-    background-repeat: no-repeat;
+    width: 270px;
+    float: left;
+    margin-left:20px ;
+}
+.case-col-right
+{
+    width: 270px;
+    float: left;
+    margin-left:20px ;
 }
 
+.case-study img
+{
+    float: left;
+    margin-left: 10px;
+    margin-top: 0.8em;
+}
+.icon
+ {
+     float:left;
+     width: 23px;
+     height: 23px;
+     display: block;
+     margin: 20px;
+     background-image: url('../img/sdc_sprites.png');
+     background-position: -28px -28px ;
+     background-repeat: no-repeat;
+ }
+
+.case-studies .icon
+{
+    margin-bottom: 10px;
+}
+
+.case-studies hr
+{
+    clear: both;
+}
+
+.hr-case-title
+{
+    margin: 0px 20px;
+    margin-bottom: 15px;
+}
+
+.hr-case-top
+{
+    width: 285px;
+    margin-left: 10px;
+}
+
+.hr-case-bottom
+{
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.chosen
+{
+    background-color: #F1F1F2;
+}
+
+.chosen .res
+{
+    background-position: 0px -318px;
+
+}
 .res
  {
      background-position: 0px -28px;
@@ -592,6 +701,7 @@ article ul, ol
 
 .case-study-category summary
 {
+    border-top: 1px solid #F1F1F2;
     position: relative;
     float: left;
     margin: 10px;
@@ -820,6 +930,34 @@ aside .content
 .archive
 {
     margin-top: 15px;
+}
+
+/* Loading Screen*/
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+    url('../img/sdc_loading.gif')
+    50% 50%
+    no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
 }
 
 /* ==========================================================================
