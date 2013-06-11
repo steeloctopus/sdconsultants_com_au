@@ -1,0 +1,29 @@
+name = SD Consultants
+description = This is the theme for Sustainability Development Consultants
+core = 7.x
+
+; CSS
+
+stylesheets[all][] = assets/css/main.css
+stylesheets[all][] = assets/css/normalize.css
+stylesheets[all][] = assets/css/system.menus.css
+
+; JS
+
+scripts[] = assets/js/main.js
+scripts[] = assets/js/plugins.js
+;scripts[] = assets/js/vendor/jquery-1.9.1.min.js
+scripts[] = assets/js/vendor/modernizr-2.6.2.min.js
+
+regions[header] = Header
+regions[help] = Help
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+regions[featured] = Featured
+regions[content] = Content
+regions[after_content] = After Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar Second
+
+regions[footer] = Footer
