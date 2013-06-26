@@ -11,7 +11,9 @@ function getCaseStudies(evt) {
     var url = category + ".html";
     $("body").addClass("loading");
     jQuery.get(url,function(data) {
-        $('.case-studies').html(data);
+        var page = jQuery.parseHTML(data);
+        var content = $('.content').page;
+        $('.case-studies').html(content);
     }).done(function() {
             $("summary:first").attr('id','expanded');
             $(".case-study").bind("click", displayCaseStudy);

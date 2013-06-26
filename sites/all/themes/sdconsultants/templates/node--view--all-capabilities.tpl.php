@@ -115,9 +115,3 @@
 
 </article>
 
-
-<!--<article class="capability-teaser">-->
-<!--    <h1><a href="capability.html">town planning sustainable design assessments</a></h1>-->
-<!--    <summary><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec est odio, pharetra ultricies-->
-<!--            arcu. Pellentesque pretium blandit volutpat. </p></summary>-->
-<!--</article>-->

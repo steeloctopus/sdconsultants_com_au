@@ -646,46 +646,46 @@ article ul, ol
     background-color: #F1F1F2;
 }
 
-.chosen .res
+.chosen .small-scale-residential, .chosen medium-scale-residential,  .chosen large-scale-residential
 {
     background-position: 0px -318px;
 
 }
-.res
+.small-scale-residential, .medium-scale-residential, .large-scale-residential
  {
      background-position: 0px -28px;
  }
 
-.gov
+.government
 {
     background-position: 0px 0px;
 }
 
-.com
+.commercial
 {
     background-position: 0 -193px;
 }
-.aged
+.aged-care
 {
     background-position: 0 -55px;
 }
 
-.ind
+.industrial
 {
     background-position: 0 -137px;
 }
 
-.inv
+.esd-investigations
 {
     background-position: 0 -111px;
 }
 
-.pol
+.policies\,-strategies-\&-guidelines
 {
     background-position: 0 -84px;
 }
 
-.edu
+.educational
 {
     background-position: 0 -166px;
 }

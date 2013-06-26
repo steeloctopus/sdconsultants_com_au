@@ -43,50 +43,14 @@
  * @ingroup themeable
  */
 ?>
-<!DOCTYPE html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
 
-<head profile="<?php print $grddl_profile; ?>">
-    <?php print $head; ?>
-    <title><?php print $head_title; ?></title>
-    <?php print $styles; ?>
-    <?php print $scripts; ?>
-</head>
 
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
+<section class="filtered-case-studies">
+<div class="icon res"></div>
+<h1>Small Scale Residential</h1>
+<hr class="hr-case-title"/>
 
-<!--[if lt IE 8]>
-<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
-    improve your experience.</p>
-<![endif]-->
-<div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-</div>
+<?php print render($page['content']); ?>
+</section>
 
-  <?php print $page_top; ?>
-  <?php print $page; ?>
-  <?php print $page_bottom; ?>
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
- <div class="modal"></div>
-  <script>
-      var _gaq = [
-          ['_setAccount', 'UA-XXXXX-X'],
-          ['_trackPageview']
-      ];
-      (function (d, t) {
-          var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-          g.src = '//www.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g, s)
-      }(document, 'script'));
-  </script>
-</body>
-</html>
