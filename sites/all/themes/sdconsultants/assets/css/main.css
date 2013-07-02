@@ -380,30 +380,40 @@ article
     font-weight: lighter;
 }
 
+.two-columns, .two-columns-capability
+ {
+    -webkit-column-count:2;
+    -moz-column-count:2;
+    column-count:2;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    padding: 0px 20px;
+}
+
+.two-columns-capability
+{
+    padding: 20px;
+}
+
+.three-columns
+{
+    -webkit-column-count:3;
+    -moz-column-count:3;
+    column-count:3;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    padding: 0px 20px;
+}
+
+
 article p
 {
     font-size: .8em;
+    color: #757678;
 }
 
-article .column-left
-{
-    float: left;
-    padding-left: 20px;
-    padding-right: 10px;
-    width:405px;
-    color:#757678 ;
-}
 
-article .column-right
-{
-    float: left;
-    padding-left: 10px;
-    padding-right: 20px;
-    width:405px;
-
-}
-
-h2, .blog-page h2, .case-studies h2
+h2, .blog-page h2, .case-studies h2, .two-columns h2, .two-columns-capability h2
 {
     font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
     font-size: 1em;
@@ -434,7 +444,7 @@ h2, .blog-page h2, .case-studies h2
     background-position: 0 -222px;
 }
 
-h3, .blog-page h3
+h3, .blog-page h3, .two-columns h3, .two-columns-capability h3
  {
      font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
      font-size: .8em;
@@ -442,7 +452,7 @@ h3, .blog-page h3
      font-weight: lighter;
  }
 
-h4, .blog-page h3
+h4, .blog-page h4, .two-columns h4, .two-columns-capability h4
 {
     font-family: Berthold, Helvetica,Arial,Sans-Serif;
     font-size: .8em;
@@ -453,6 +463,7 @@ h4, .blog-page h3
 article ul, ol
 {
     font-size: .8em;
+    color: #757678;
 }
 
 .basic-page h1, .blog-page h1
@@ -486,15 +497,10 @@ article ul, ol
     padding-right: 400px;
 }
 
-.associated-case-studies ul, ol
-{
-    list-style: none;
-    padding-left: 0px;
-}
-
 .associated-case-studies a
 {
     color: #000000;
+    font-size: 0.8em;
 
 }
 
@@ -583,25 +589,6 @@ article ul, ol
 }
 
 
-.case-col-left
-{
-    width: 270px;
-    float: left;
-    margin-left:20px ;
-}
-.case-col-right
-{
-    width: 270px;
-    float: left;
-    margin-left:20px ;
-}
-
-.case-study img
-{
-    float: left;
-    margin-left: 10px;
-    margin-top: 0.8em;
-}
 .icon
  {
      float:left;
@@ -689,6 +676,11 @@ article ul, ol
 {
     background-position: 0 -166px;
 }
+
+.no-top-margin
+{
+    margin-top: 0px;
+}
 .case-study-category h1 a
 {
     color: #000000;
@@ -723,7 +715,7 @@ article ul, ol
 
 /* Team Page */
 
-.profile
+.team-profile
 {
     float: left;
     margin-left: 17px;
@@ -731,7 +723,7 @@ article ul, ol
     width: 411px;
 }
 
-.profile h2
+.team-profile h2
 {
     padding: 10px 10px 0 10px;
     margin: 0px;
@@ -740,7 +732,7 @@ article ul, ol
     font-size: 1.3em;
 }
 
-.profile h3
+.team-profile h3
 {
     margin: 0 10px;
     border-bottom: 1px solid #F1F1F2;
@@ -753,7 +745,7 @@ article ul, ol
 
 }
 
-.profile summary
+.team-profile summary
 {
     padding: 10px;
 }

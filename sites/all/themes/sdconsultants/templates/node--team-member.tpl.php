@@ -79,19 +79,31 @@
      *
      * @ingroup themeable
      */
+
+    $field_job_title = field_get_items('node',$node,'field_job_title');
 ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> case-study clearfix"<?php print $attributes; ?>>
+<article class="team-profile">
 
-    <?php print render($title_prefix); ?>
-        <h2<?php print $title_attributes; ?> class="plus" ><?php print $title; ?></h2>
-    <?php print render($title_suffix); ?>
-    <hr class="hr-case-top"/>
+    <?php
+        print render($content['field_image']);
+    ?>
+    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
 
-    <summary class="<?php print $content_attributes; ?> ">
-        <div class="three-columns">
-        <?php print render($content); ?>
+    <h3 class="job-title"><?php print render($content['field_job_title']) ?></h3>
+
+    <?php if ($display_submitted): ?>
+        <div class="submitted">
+            <?php print $submitted; ?>
         </div>
-            <hr class="hr-case-bottom"/>
-    </summary>
-</article>
+    <?php endif; ?>
 
+    <summary class="job-decs">
+        <?php
+            // We hide the comments and links now so that we can render them later.
+            print render($content);
+        ?>
+
+    </summary>
+
+
+</article>

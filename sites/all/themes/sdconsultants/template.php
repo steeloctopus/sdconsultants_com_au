@@ -34,3 +34,20 @@ function sdconsultants_links__system_main_menu($variables) {
         return $html;
     }
 
+function sdconsultants_field__field_related_case_studies($variables)
+{
+    $case_studies = $variables['element']['#items'];
+    $html ='';
+    foreach($case_studies as $study)
+    {
+        $node = node_load($study['target_id']);
+        $id =  field_get_items('node', $node, 'field_case_study_category', $node->language);
+        $category = taxonomy_term_load($id[0]['tid']);
+
+        $safe_name = strtolower(str_replace(' ', '-',$category->name));
+
+        $html .= '<a href="'.$GLOBALS['base_root'].'/filtered-case-studies/'.$safe_name.'/'.$node->nid.'"/>'.$node->title.'</a><br/>';
+
+    }
+    return $html;
+}

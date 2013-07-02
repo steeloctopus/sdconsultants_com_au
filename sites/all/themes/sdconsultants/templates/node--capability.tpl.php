@@ -102,16 +102,14 @@
     </div>
   <?php endif; ?>
 
-  <div class="<?php print $content_attributes; ?>">
+  <div class="<?php print $content_attributes; ?> two-columns-capability">
     <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      print render($content);
+      print render($content['body']);
     ?>
-  </div>
+
        <div class="associated-case-studies">
-            <!-- Need to put in accosicated case studies here -->
+           <?php print render($content['field_related_case_studies']); ?>
        </div>
-       <a class="back" href="/">back to Services & Capabilities overview</a></div>
+       <a class="back" href="/">back to Services & Capabilities overview</a>
+  </div>
 </article>

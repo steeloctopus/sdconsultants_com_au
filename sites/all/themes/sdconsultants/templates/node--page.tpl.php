@@ -85,7 +85,7 @@
     <?php print render($content['field_basic_page_image']); ?>
 
     <?php print render($title_prefix); ?>
-    <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+    <?php if ($title): ?><h1 class="name"><?php print $title; ?></h1><?php endif; ?>
     <?php print render($title_suffix); ?>
 
   <?php if ($display_submitted): ?>
@@ -94,16 +94,20 @@
     </div>
   <?php endif; ?>
 
+
   <?php print $content_attributes; ?>
+    <div class="two-columns">
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
       print render($content);
     ?>
-
+    </div>
   <?php print render($content['links']); ?>
 
   <?php print render($content['comments']); ?>
 
+
+   <hr class="bottom">
 </article>
