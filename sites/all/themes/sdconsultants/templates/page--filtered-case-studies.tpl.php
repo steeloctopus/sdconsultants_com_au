@@ -42,12 +42,14 @@
  *
  * @ingroup themeable
  */
+
+    $logo_number = rand(1,5);
 ?>
 <!-- Add your site or application content here -->
 <header>
     <div class="header-top">
-        <a href="/"><img class="logo" src="<?php print base_path(); print path_to_theme()?>/assets/img/sdc_logo_1.png" class="logo"/></a>
-        <img class="strap-line" src="<?php print base_path(); print path_to_theme()?>/assets/img/sdc_banner.png"/>
+        <a href="/"><img class="logo retina-img" src="<?php print base_path(); print path_to_theme()?>/assets/img/sdc_logo_<?php print $logo_number; ?>.png" data-src2x="<?php print base_path(); print path_to_theme()?>/assets/img/sdc_logo_<?php print $logo_number; ?>_2x.png" class="logo" width="91px" height="89px"/></a>
+        <img class="strap-line retina-img" src="<?php print base_path(); print path_to_theme()?>/assets/img/sdc_banner.png" data-src2x="<?php print base_path(); print path_to_theme()?>/assets/img/sdc_banner_2x.png" width="390px" height="77px"/>
     </div>
     <div class="header-box"></div>
     <?php if ($page['header']): ?><?php print render($page['header']); ?><?php endif; ?>

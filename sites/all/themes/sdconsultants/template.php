@@ -7,33 +7,6 @@
  * To change this template use File | Settings | File Templates.
  */
 
-function sdconsultants_links__system_main_menu($variables) {
-        $html = "<ul>\n";
-        foreach ($variables['links'] as $link) {
-
-            $nav_item = $link['link'];
-            $sub_nav_item = $link['below'];
-
-            $html .= "<li>".l($nav_item['title'], $nav_item['href'], $nav_item)."</li>";
-
-            if (count($sub_nav_item) >= 1)
-            {
-                $html .= '<ul class="sub-nav">';
-
-                foreach ($sub_nav_item as $item)
-                {
-                    $html .= "<li>".l($item['link']['title'], $item['link']['href'], $item['link'])."</li>";
-                }
-                $html .= "</ul>";
-
-            }
-
-        }
-        $html .= "  </ul>\n";
-
-        return $html;
-    }
-
 function sdconsultants_field__field_related_case_studies($variables)
 {
     $case_studies = $variables['element']['#items'];
@@ -49,5 +22,50 @@ function sdconsultants_field__field_related_case_studies($variables)
         $html .= '<a href="'.$GLOBALS['base_root'].'/filtered-case-studies/'.$safe_name.'/'.$node->nid.'"/>'.$node->title.'</a><br/>';
 
     }
+    return $html;
+}
+
+function sdconsultants_field__field_case_study_pdf__case_study($variables)
+{
+    $files = $variables['items'];
+
+    $file = $files[0]['#file'];
+
+    $url = file_create_url($file->uri);
+
+    // Set options as per anchor format described at
+    // http://microformats.org/wiki/file-format-examples
+    $options = array(
+        'attributes' => array(
+            'type' => $file->filemime . '; length=' . $file->filesize,
+            'class' => 'case-study-file',
+        ),
+    );
+
+    // Use the description as the link text if available.
+    if (empty($file->description)) {
+        $link_text = $file->filename;
+    }
+    else {
+        $link_text = $file->description;
+        $options['attributes']['title'] = check_plain($file->filename);
+    }
+    $link = l($link_text, $url, $options);
+    return $link;
+}
+
+function sdconsultants_aggregator_block_item($variables)
+{
+    $news_item = $variables['item'];
+
+    $title = '<h3>'.$news_item->title.'</h3>';
+
+    $options = array('attributes' =>array('target'=>'_blank'));
+
+    $link = l('more',$news_item->link,$options);
+
+
+    $html = '<div class="news">'.$title.$link.'</div>';
+
     return $html;
 }

@@ -1071,6 +1071,16 @@ body.loading .modal {
     /* Style adjustments for viewports that meet the condition */
 }
 
+/* Tablet styles */
+@media only screen and (min-width: 320px) and (max-width: 1200px){
+
+    nav
+    {
+        position: absolute;
+        background-color: #0000ff;
+    }
+}
+
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),

@@ -193,24 +193,28 @@ nav a
     color: #000000;
 }
 
-nav a.active
+nav a.active, nav a.active-trail
 {
     text-decoration: #000000;
     text-decoration: underline;
 }
 
-.sub-nav li
+.expanded ul
+{
+    margin: 0px;
+}
+.expanded li
 {
     font-size: .8em;
     border: none;
 
 }
-.sub-nav a
+.expanded a
 {
     color: #757678;
 }
 
-.sub-nav a.selected
+.expanded a.active
 {
     display: block;
     padding-left: 10px;
@@ -218,7 +222,7 @@ nav a.active
     color: #000000;
 }
 
-.sub-nav a.selected:before
+.expanded a.active:before
 {
     content:">  ";
 }
@@ -286,9 +290,10 @@ nav a.active
 .capability-teaser summary p
 {
     font-size: 1.1em;
+    color: #9294A3;
 }
 
-.capability-teaser a, .news a
+.capability-teaser a, .news a, .blog-edit a
  {
     border-bottom: 1px solid #F1F1F2;
     color: #00DECF;
@@ -413,7 +418,7 @@ article p
 }
 
 
-h2, .blog-page h2, .case-studies h2, .two-columns h2, .two-columns-capability h2
+h2, .blog-page h2, .case-studies h2, .two-columns h2, .two-columns-capability h2,  .industry-news-feed h2, .archive h2
 {
     font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
     font-size: 1em;
@@ -435,13 +440,24 @@ h2, .blog-page h2, .case-studies h2, .two-columns h2, .two-columns-capability h2
     width: 100%;
     margin:0px;
     background-image: url('../img/sdc_sprites.png');
-    background-position: 0 -249px;
+    background-position: 0 -428px;
     background-repeat: no-repeat;
 }
 
 .plus
 {
-    background-position: 0 -222px;
+    background-position: 0 -380px;
+}
+
+.plus:hover
+{
+    background-position: 0 -404px;
+}
+
+.minus:hover
+{
+    background-position: 0 -452px
+;
 }
 
 h3, .blog-page h3, .two-columns h3, .two-columns-capability h3
@@ -588,6 +604,20 @@ article ul, ol
     margin-bottom: 10px;
 }
 
+.case-study-file
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #00DECF;
+    display: block;
+    font-size: 0.8em;
+}
+.case-study-file:after
+{
+    content: " >";
+}
+
+
 
 .icon
  {
@@ -633,48 +663,84 @@ article ul, ol
     background-color: #F1F1F2;
 }
 
-.chosen .small-scale-residential, .chosen medium-scale-residential,  .chosen large-scale-residential
+.chosen .small-scale-residential, .chosen .medium-scale-residential,  .chosen .large-scale-residential
 {
-    background-position: 0px -318px;
-
+    background-position: 0px -23px;
 }
+
 .small-scale-residential, .medium-scale-residential, .large-scale-residential
  {
-     background-position: 0px -28px;
+     background-position: 0px -0px;
  }
 
 .government
 {
-    background-position: 0px 0px;
+    background-position: 0px -143px;
+}
+
+.chosen .government
+{
+    background-position: 0px -167px;
 }
 
 .commercial
 {
-    background-position: 0 -193px;
+    background-position: 0 -47px;
 }
+
+.chosen .commercial
+{
+    background-position: 0 -70px;
+}
+
 .aged-care
 {
-    background-position: 0 -55px;
+    background-position: 0 -191px;
 }
+
+.chosen .aged-care
+{
+    background-position: 0 -215px;
+}
+
 
 .industrial
 {
-    background-position: 0 -137px;
+    background-position: 0 -239px;
+}
+
+.chosen .industrial
+{
+    background-position: 0 -263px;
 }
 
 .esd-investigations
 {
-    background-position: 0 -111px;
+    background-position: 0 -287px;
+}
+
+.chosen .esd-investigations
+{
+    background-position: 0 -308px;
 }
 
 .policies\,-strategies-\&-guidelines
 {
-    background-position: 0 -84px;
+    background-position: 0 -335px;
 }
 
+.chosen .policies\,-strategies-\&-guidelines
+{
+    background-position: 0 -358px;
+}
 .educational
 {
-    background-position: 0 -166px;
+    background-position: 0 -97px;
+}
+
+.chosen .educational
+{
+    background-position: 0 -117px;
 }
 
 .no-top-margin
@@ -802,29 +868,21 @@ article ul, ol
 
 /* Contact Page */
 
-.address {
+address {
     font-family: Berthold, Helvetica,Arial,Sans-Serif;
-    float: left;
-    margin-left: 20px;
-    width: 280px;
+    font-style: normal;
 }
 
-.address p
+address p
 {
     font-family: Berthold, Helvetica,Arial,Sans-Serif;
     font-size: .8em;
 }
 
-.address a
+address a
 {
     text-decoration: none;
     color: #000000;
-}
-.map
-{
-    float:left;
-    padding-top: 15px;
-    padding-bottom: 100px;
 }
 
 aside
@@ -898,26 +956,65 @@ aside .content
     border: none;
 }
 
-.news a
+.industry-news-feed .item-list ul li
+{
+    margin: 0px;
+}
+
+.news a, .blog-edit a
 {
     text-transform: uppercase;
     font-size: .6em;
 }
-.news a:after
+.news a:after, .blog-edit a:after
 {
     content:" >";
 }
 
-.news p
+.news p, .news h3
 {
     font-size: .8em;
 }
 
 .archive
 {
-    margin-top: 15px;
+    background-color: #FFFFFF;
+    margin-bottom: 15px;
+    padding: 15px;
 }
 
+.archive .item-list ul li {
+    margin: 0 0 0.25em 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+
+.archive a, .archive li
+{
+    color: #000000;
+    font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
+    text-decoration: none;
+}
+
+.archive a.active
+{
+    color: #000000;
+    text-decoration: underline;
+}
+
+.industry-news-feed
+{
+    background-color: #ffffff;
+    padding: 15px;
+    width: 255px;
+    margin-bottom: 15px;
+}
+
+.industry-news-feed .more-link
+{
+    display: none;
+}
 /* Loading Screen*/
 
 .modal {
@@ -945,6 +1042,7 @@ body.loading {
 body.loading .modal {
     display: block;
 }
+
 
 /* ==========================================================================
    Helper classes
@@ -1055,6 +1153,15 @@ body.loading .modal {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 320px) and (max-width: 1024px)
+{
+    nav
+    {
+        position: absolute;
+    }
 }
 
 @media print,
