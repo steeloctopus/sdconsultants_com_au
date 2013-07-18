@@ -28,10 +28,11 @@
     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
     <?php if ($page['featured']): ?><div id="featured"><?php print render($page['featured']); ?></div><?php endif; ?>
     <aside>
+        <?php print $feed_icons; ?>
         <?php print render($page['sidebar_second']); ?>
     </aside>
     <?php print render($page['content']); ?>
-    <?php print $feed_icons; ?>
+
     <?php print render($page['after_content']); ?>
 </section>
 

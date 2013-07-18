@@ -476,6 +476,13 @@ h4, .blog-page h4, .two-columns h4, .two-columns-capability h4
     font-weight: normal;
 }
 
+.feed-icon {
+    float: right;
+    margin: 15px;
+    position: relative;
+    z-index: 800;
+}
+
 article ul, ol
 {
     font-size: .8em;
