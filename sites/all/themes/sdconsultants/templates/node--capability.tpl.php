@@ -110,6 +110,7 @@
        <div class="associated-case-studies">
            <?php print render($content['field_related_case_studies']); ?>
        </div>
-       <a class="back" href="/">back to Services & Capabilities overview</a>
+
   </div>
+    <a class="back" href="/">back to Services & Capabilities overview</a>
 </article>

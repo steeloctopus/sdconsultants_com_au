@@ -88,6 +88,7 @@
     <hr class="hr-case-top"/>
 
     <summary class="<?php print $content_attributes; ?> ">
+        <?php print render($content['field_case_study_image']); ?>
         <div class="three-columns">
         <?php print render($content); ?>
         </div>

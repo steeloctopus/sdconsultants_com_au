@@ -47,7 +47,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #F1F1F2;
     margin: 1em 0;
     padding: 0;
 }
@@ -385,6 +385,11 @@ article
     font-weight: lighter;
 }
 
+article a
+{
+    color:#757678;
+}
+
 .two-columns, .two-columns-capability
  {
     -webkit-column-count:2;
@@ -392,19 +397,19 @@ article
     column-count:2;
     -moz-column-gap: 1em;
     -webkit-column-gap: 1em;
-    padding: 0px 20px;
+    padding: 0px 20px 60px 20px;
 }
 
 .two-columns-capability
 {
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
 }
 
 .three-columns
 {
-    -webkit-column-count:3;
-    -moz-column-count:3;
-    column-count:3;
+    -webkit-column-count:2;
+    -moz-column-count:2;
+    column-count:2;
     -moz-column-gap: 1em;
     -webkit-column-gap: 1em;
     padding: 0px 20px;
@@ -501,6 +506,52 @@ article ul, ol
     padding-bottom: 30px;
 }
 
+.team-page h1
+{
+    border-bottom: 0px solid #F1F1F2;
+    color: #00DECE;
+    font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
+    font-size: 1.3em;
+    font-weight: lighter;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 00px;
+}
+
+.team-page h2
+{
+    border-bottom: 1px solid #F1F1F2;
+    color: #00DECE;
+    font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
+    font-size: 1em;
+    font-weight: lighter;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+}
+
+#node-181 .two-columns
+{
+    -webkit-column-count:1;
+    -moz-column-count:1;
+    column-count:1;
+    padding: 0px 20px 60px 20px;
+}
+
+
+.acc-3-per-line .rtecenter {
+    float: left;
+    margin: auto;
+    text-align: center;
+    width: 33%;
+}
+
+.acc-2-per-line .rtecenter {
+    float: left;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
 
 /* Capability Page */
 
@@ -509,12 +560,13 @@ article ul, ol
     background-image: url('../img/default_capability_image.png');
     display: block;
     width: 455px;
-    height: 184px;
+    height: 174px;
+    padding-top:10px;
     color: #FFFFFF;
     font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
     margin: 0px;
     text-transform: capitalize;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: lighter;
     padding-left: 20px;
     padding-right: 400px;
@@ -534,10 +586,13 @@ article ul, ol
 
 .back
 {
-    text-transform: uppercase;
-    color:#00DECE ;
-    font-size: .6em;
+    color: #00DECE;
+    float: right;
+    font-size: 0.6em;
+    padding-bottom: 60px;
+    padding-right: 195px;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .back:before
@@ -624,7 +679,10 @@ article ul, ol
     content: " >";
 }
 
-
+.field-name-field-case-study-image {
+    float: left;
+    margin-left: 10px;
+}
 
 .icon
  {
@@ -670,12 +728,12 @@ article ul, ol
     background-color: #F1F1F2;
 }
 
-.chosen .small-scale-residential, .chosen .medium-scale-residential,  .chosen .large-scale-residential
+.chosen .residential, .chosen .medium-scale-residential,  .chosen .large-scale-residential
 {
     background-position: 0px -23px;
 }
 
-.small-scale-residential, .medium-scale-residential, .large-scale-residential
+.residential, .medium-scale-residential, .large-scale-residential
  {
      background-position: 0px -0px;
  }
@@ -740,6 +798,19 @@ article ul, ol
 {
     background-position: 0 -358px;
 }
+
+/* This style is required because the heading goes on two lines */
+#policies\,-strategies-\&-guidelines h1
+{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+/* This style is required because the heading goes on two lines */
+#policies\,-strategies-\&-guidelines h1 a
+{
+    margin-bottom: 0;
+}
+
 .educational
 {
     background-position: 0 -97px;
@@ -772,6 +843,7 @@ article ul, ol
     margin: 10px;
     color: #9294A3;
     z-index: 100;
+    height: 168px;
 }
 
 .case-study-category a
@@ -783,6 +855,12 @@ article ul, ol
     padding-bottom: 20px;
     text-decoration: none;
     width: 265px;
+}
+
+.case-study-category summary a {
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 10px;
 }
 
 
@@ -802,7 +880,8 @@ article ul, ol
     margin: 0px;
     color: #000000;
     font-family: InconsolataHellenic,Helvetica,Arial,Sans-Serif;
-    font-size: 1.3em;
+    font-size: 1.1em;
+    border: none;
 }
 
 .team-profile h3
